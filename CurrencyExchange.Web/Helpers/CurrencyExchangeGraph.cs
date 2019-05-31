@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CurrencyExchange.Web.Helpers.Interfaces;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,15 +7,6 @@ using System.Threading.Tasks;
 
 namespace CurrencyExchange.Web.Helpers
 {
-    public interface IGraph
-    {
-        void AddEdge(DirectedEdge e);
-        IEnumerable<DirectedEdge> Adj(int v);
-        int V();
-        IEnumerable<DirectedEdge> E();
-        string ToString();
-    }
-
     public class CurrencyExchangeGraph : IGraph
     {
         private readonly int v;
